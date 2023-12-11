@@ -1,0 +1,20 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:dc="https://vezel.dev/novadrop/dc"
+            xmlns="https://vezel.dev/novadrop/dc/PartyMatchingSetting"
+            targetNamespace="https://vezel.dev/novadrop/dc/PartyMatchingSetting"
+            xsi:schemaLocation="https://vezel.dev/novadrop/dc ../DataCenter.xsd"
+            elementFormDefault="qualified">
+    <xsd:complexType name="PartyMatchingSetting">
+        <xsd:sequence>
+            <xsd:element name="Setting" type="PartyMatchingSetting_Setting" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="PartyMatchingSetting_Setting">
+        <xsd:attribute name="lifeTime" type="xsd:int" use="required" />
+        <xsd:attribute name="maxCount" type="xsd:int" use="required" />
+    </xsd:complexType>
+
+    <xsd:element name="PartyMatchingSetting" type="PartyMatchingSetting" />
+</xsd:schema>
